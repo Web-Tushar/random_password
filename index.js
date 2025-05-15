@@ -1,5 +1,6 @@
 const passwordbox = document.querySelector("#password")
 const input_press = document.querySelector(".input_press")
+const copy_btn = document.querySelector(".copy_btn")
 
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -28,7 +29,15 @@ function crearPassword() {
 
 }
 
+function copyPassword(){
+   passwordbox.select();
+   document.execCommand("copy")
+}
+
 
 input_press.addEventListener("click",function(){
      crearPassword()
+})
+copy_btn.addEventListener("click",function(){
+     copyPassword()
 })
